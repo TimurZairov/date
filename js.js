@@ -8,20 +8,17 @@ let hi = document.querySelector('.hi'),
 let date = new Date();
 
 //Привествие на странице
-function greeting(){
-    let hours = date.getHours();
+let hours = date.getHours();
         if(hours > 5 && hours < 11){
-                console.log('Доброе утро');
+            hi.textContent ='Доброе утро';
         }else if(hours > 11 && hours < 17){
-                console.log('Добрый день');
+            hi.textContent ='Добрый день';
         }else if(hours > 17 && hours < 22){
-                console.log('Добрый вечер');
+            hi.textContent ='Добрый вечер';
         }else if(hours > 22 && hours < 5){
-                console.log('Доброй ночи');
-    }
-}
-greeting();
-hi.textContent = ``;
+            hi.textContent ='Доброй ночи';
+};
+
 //день недели
 let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 let weekDay = date.getDate();
